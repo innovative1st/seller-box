@@ -1,0 +1,69 @@
+
+<div class="mat-elevation-z8">
+    <!-- <div class="card">
+        <div class="card-body">  -->
+  <table mat-table class="table table-striped table-responsive" [dataSource]="dataSource" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="il_id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>IL_Id</th>
+      <td mat-cell *matCellDef="let row">{{row.il_id}}</td>
+    </ng-container>
+
+    <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="sku_code">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>SKU_CODE</th>
+      <td mat-cell *matCellDef="let row">{{row.sku_code}}</td>
+    </ng-container>
+
+    <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="location_code">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>LOCATION_CODE</th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      </ng-container>
+      <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="etailor_id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ETAILOR_ID</th>
+        <td mat-cell *matCellDef="let row">{{row.etailor_id}}</td>
+      </ng-container>
+      <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>QUANTITY</th>
+        <td mat-cell *matCellDef="let row">{{row.quantity}}</td>
+      </ng-container>
+      <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="inventory_status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>INVENTORY_STATUS</th>
+        <td mat-cell *matCellDef="let row">{{row.inventory_status}}</td>
+      </ng-container>
+      <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="sales_price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>SALES_PRICE</th>
+        <td mat-cell *matCellDef="let row">{{row.sales_price}}</td>
+      </ng-container>
+      <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="shipping_charge">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>SHIPPING_CHARGE</th>
+        <td mat-cell *matCellDef="let row">{{row.shipping_charge}}</td>
+      </ng-container>
+      <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="source_location">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>SOURCE_LOCATION</th>
+        <td mat-cell *matCellDef="let row">{{row.source_location}}</td>
+      </ng-container>
+       <!-- SKU_CODE Column -->
+    <ng-container matColumnDef="item_location">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ITEM_LOCATION</th>
+        <td mat-cell *matCellDef="let row">{{row.item_location}}</td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator 
+      [length]="dataSource.data.length"
+      [pageIndex]="0"
+      [pageSize]="25"
+      [pageSizeOptions]="[25, 50, 100, 250]">
+  </mat-paginator>
+</div>
