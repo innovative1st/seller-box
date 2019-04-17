@@ -16,6 +16,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
 //import { trigger, state, style, transition, animate } from '@angular/animations'; 
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
+import { MaterialModule } from './layout/material/material.module';
+
+
+
 
 
 //import {PaginationService} from './layout/pagination/pagination/pagination.service';
@@ -52,7 +56,8 @@ export const createTranslateLoader = (http: HttpClient) => {
         MatTableModule,
         MatPaginatorModule,
         MatSortModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MaterialModule
     ],
     declarations: [AppComponent],
     providers: [AuthGuard],

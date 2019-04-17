@@ -1,3 +1,19 @@
+<app-page-header [heading]="'Order Processing'" [subheading]="'Orders'" [icon]="'fa-table'"></app-page-header>
 <div [@routerTransition]>
-<app-ready-to-pick></app-ready-to-pick>
+  <nav>
+    <div class="row" style="background-color: aquamarine;">
+          <div class="col-sm-3" style="background-color:yellow;"><a routerLink="./neworder" routerLinkActive="active">New Order</a></div>
+          <div class="col-sm-3" style="background-color:beige;"><a routerLink="./readytopick" routerLinkActive="active">Ready To Pick</a></div>
+          <div class="col-sm-3" style="background-color:burlywood;"><a routerLink="./readytoship" routerLinkActive="active">Ready To Pack</a></div>
+          <div class="col-sm-3" style="background-color:cyan;"><a routerLink="./readytoship" routerLinkActive="active">Ready To Ship</a></div>
+    </div>
+    
+    <!-- <a routerLink="./" routerLinkActive="active"    [routerLinkActiveOptions]="{ exact: true }">New Order</a>&nbsp; -->
+    
+    
+    
+    <!-- <a routerLink="./readytopack" routerLinkActive="active">Ready To Pack</a>&nbsp; -->
+  </nav>
+  <router-outlet></router-outlet>
 </div>
+

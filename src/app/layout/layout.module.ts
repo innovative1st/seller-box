@@ -17,10 +17,7 @@ import { ReadyToPackComponent } from './order-processing/ready-to-pack/ready-to-
         CommonModule,
         LayoutRoutingModule,
         TranslateModule,
-        NgbDropdownModule,
-        HttpModule,
-        FormsModule,
-        MaterialModule
+        NgbDropdownModule
     ],
     declarations: [LayoutComponent, SidebarComponent, HeaderComponent]
 })

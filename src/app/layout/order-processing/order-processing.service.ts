@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material';
+import { ReadyToPackComponent } from './ready-to-pack/ready-to-pack.component';
+import { RequestOptions, Headers} from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderProcessingService {
+ 
+  private headers = new Headers({'Content-Type' : 'application/json'});
+  private options = new RequestOptions({headers : this.headers});
+  private auth: string;
+  constructor(private dialog: MatDialog, private _http: HttpClient, ) { }
 
-  constructor() { }
-
- // employeeList: AngularFireList<any>;
-
+  
   form: FormGroup = new FormGroup({
     $key: new FormControl(null),
     fullName: new FormControl('', Validators.required),
@@ -36,7 +42,6 @@ export class OrderProcessingService {
       isPermanent: false
     });
   }
-
 
 
 }

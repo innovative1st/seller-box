@@ -1,14 +1,100 @@
-<div class="form-popup">
-    <form class="form-container" style= "background-color: beige">
-      <h1>Login</h1>
-  
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-  
-      <button type="submit" class="btn">Login</button>
-      <button (onclick)="onClear()">Close</button>
-    </form>
+<p>ready to pack works</p>
+
+<section class="container">
+  <div class="row" style="background-color: cornsilk; padding-top: 10px !important;">
+    <div class="col-md-11">Inbound/Outbound</div>
+    <div class="col-md-1">
+      <!-- <button
+        class="btn-dialog-close"
+        (click)="onClose()"> -->
+        <i class="fa fa-window-close popup-close" aria-hidden="true" (click)="onClose()"></i>
+        <!-- <mat-icon>clear</mat-icon> -->
+      <!-- </button> -->
+    </div>
   </div>
+  <form [formGroup]="options" class="normal-form" (submit)="onSubmit()">
+    <div class="row">
+      <mat-card class="col-md-6">
+        <label>Adjustment Type: </label>&nbsp;&nbsp;
+        <mat-radio-group formControlName="floatLabel">
+          <mat-radio-button value="always">Found</mat-radio-button>&nbsp;&nbsp;
+          <mat-radio-button value="never">Lost</mat-radio-button>
+        </mat-radio-group>
+        <br />
+        <br />
+        <mat-form-field [floatLabel]="options.value.floatLabel">
+          <label>Etailor Name:</label>
+          <mat-select required>
+            <mat-option>-- None --</mat-option>
+            <mat-option value="option">1</mat-option>
+            <mat-option value="option">2</mat-option>
+            <mat-option value="option">3</mat-option>
+            <mat-option value="option">4</mat-option>
+          </mat-select>
+          <!-- <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label> -->
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <mat-form-field [floatLabel]="options.value.floatLabel">
+          <label>WareHouse:</label>
+          <mat-select required>
+            <mat-option>-- None --</mat-option>
+            <mat-option value="option">1</mat-option>
+            <mat-option value="option">2</mat-option>
+            <mat-option value="option">3</mat-option>
+            <mat-option value="option">4</mat-option>
+          </mat-select>
+          <!-- <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label> -->
+        </mat-form-field>
+        <mat-form-field [floatLabel]="options.value.floatLabel">
+          <label>SKU CODE:</label>
+          <input matInput required /> </mat-form-field
+        >&nbsp;&nbsp;
+        <mat-form-field [floatLabel]="options.value.floatLabel">
+          <label>EAN/UPC:</label>
+          <input matInput required />
+        </mat-form-field>
+        <mat-form-field [floatLabel]="options.value.floatLabel">
+          <label>FNSKU:</label>
+          <input matInput required /> </mat-form-field
+        >&nbsp;&nbsp;
+        <mat-form-field [floatLabel]="options.value.floatLabel">
+          <label>ITEM ID:</label>
+          <input matInput required /> </mat-form-field
+        >&nbsp;&nbsp;
+      </mat-card>
+
+      <!-- we use mat-card instead of div -->
+      <mat-card class="col-md-6" style="height: 50%;">
+        <img mat-card-image src="./../../../../assets/images/slider1.jpg" />
+        <br />
+        <mat-form-field [floatLabel]="options.value.floatLabel">
+          <label>Product Name:</label>
+          <input matInput readonly="true" />
+        </mat-form-field>
+        <br />
+        <mat-form-field [floatLabel]="options.value.floatLabel">
+          <label>Quantity:</label>
+          <input matInput required />
+        </mat-form-field>
+        <br />
+        <button
+          md-button
+          class="submit-btn"
+          (click)="resetForm()"
+          type="reset"
+          style="float: right;"
+        >
+          Submit
+        </button>
+        <button
+          md-button
+          class="submit-btn"
+          type="submit"
+          style="float: right;"
+        >
+          Reset
+        </button>
+      </mat-card>
+    </div>
+  </form>
+</section>

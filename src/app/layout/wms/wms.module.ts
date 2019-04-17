@@ -10,6 +10,7 @@ import { DataTableComponent } from './data-table/data-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material';
+import { InventorySerachComponent } from './inventory-serach/inventory-serach.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {MatNativeDateModule} from '@angular/material';
     VirtualInventoryComponent,
     BookStockComponent,
     InventoryComponent,
-    DataTableComponent
+    DataTableComponent,
+    InventorySerachComponent
 
   ],
   imports: [

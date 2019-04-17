@@ -38,6 +38,7 @@ export class SidebarComponent implements OnInit {
         this.collapsed = true;
         this.showMenu = '';
         this.pushRightClass = 'push-right';
+        
     }
 
 
@@ -45,8 +46,10 @@ export class SidebarComponent implements OnInit {
         this.isActive = !this.isActive;
     }
 
+   
+
     addExpandClass(element: any, parentId : any, childId : any) {
-        alert('parentId---->'+parentId+'-top---->'+document.getElementById(parentId).offsetTop+'---'+childId);
+       alert('parentId---->'+parentId+'-top---->'+document.getElementById(parentId).offsetTop+'---'+childId);
         var child = document.getElementById(childId)
         child.style.position = "fixed";
         //child.style.left = x_pos+'px';
@@ -59,10 +62,10 @@ export class SidebarComponent implements OnInit {
         }
     }
 
-    toggleCollapsed() {
-        this.collapsed = !this.collapsed;
-        this.collapsedEvent.emit(this.collapsed);
-    }
+    // toggleCollapsed() {
+    //     this.collapsed = !this.collapsed;
+    //     this.collapsedEvent.emit(this.collapsed);
+    // }
 
     isToggled(): boolean {
         const dom: Element = document.querySelector('body');
@@ -86,4 +89,6 @@ export class SidebarComponent implements OnInit {
     onLoggedout() {
         localStorage.removeItem('isLoggedin');
     }
+    
+    
 }

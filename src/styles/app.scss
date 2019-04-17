@@ -5,8 +5,41 @@
 @import "rtl";
 @import "responsive";
 
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @media print {
     .breadcrumb {
         display: none !important;
     }
+}
+.custom-dialog-container .mat-dialog-container {
+    /* add your styles */
+    padding: 0px;
+    height: auto;
+    margin-top: 60px;
+}
+// .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+//     padding-bottom: 0;
+// }
+.custom-dialog-container .mat-form-field-infix {
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 258px;
+}
+.mat-card-image:first-child {
+    height: 200px;
+    width: 150px;
+    padding: 10px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.custom-dialog-container .mat-icon{
+    margin-left: 1085px;
+}
+.custom-dialog-container .mat-stroked-button {
+    /* border: 1px solid currentColor; */
+    //padding: 0 15px;
+   // line-height: 34px;
+   border: none;
 }

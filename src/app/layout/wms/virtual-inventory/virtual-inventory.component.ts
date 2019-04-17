@@ -4,12 +4,17 @@ import { VirtualInventoryService } from './virtual-inventory.service';
 
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-virtual-inventory',
   templateUrl: './virtual-inventory.component.html',
   styleUrls: ['./virtual-inventory.component.scss']
 })
 export class VirtualInventoryComponent implements OnInit {
+
+  // selectFormControl = new FormControl('', Validators.required);
+
+  // etailors = ['Amazon Seller Flex']
 
   private page: number = 0;
   private inentoryIan: Array<any>;
@@ -28,6 +33,7 @@ export class VirtualInventoryComponent implements OnInit {
   constructor(private _inventoryService: VirtualInventoryService, private _router: Router) { 
     
   }
+  
 
   //@ViewChild('popup5') popup1: Popup;
  
@@ -55,4 +61,5 @@ export class VirtualInventoryComponent implements OnInit {
       }
     );
   }
+  
 }

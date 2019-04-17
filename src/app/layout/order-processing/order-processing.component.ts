@@ -16,16 +16,5 @@ export class OrderProcessingComponent implements OnInit {
 
   ngOnInit() {
   }
-
- 
-  // onCreate() {
-  //   this.service.initializeFormGroup();
-  //   const dialogConfig = new MatDialogConfig();
-  //   dialogConfig.disableClose = true;
-  //   dialogConfig.autoFocus = true;
-  //   dialogConfig.width = '80%';
-  //   this.dialog.open(ReadyToPackComponent, dialogConfig);
-  // }
   
-
 }

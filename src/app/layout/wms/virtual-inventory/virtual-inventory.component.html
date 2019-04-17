@@ -1,51 +1,51 @@
+ <section class="container-fliud">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+          <!--<button href="https://www.facebook.com/opdahlmann" class="btn btn-mbe-normal sp" (click)="showPopup()">Inbound</button>-->
+          <table class="table table-striped table-responsive">
+            <thead>
+              <th>IL_ID</th>
+              <th>SKU_CODE</th>
+              <th>LOCATION_CODE</th>
+              <th>ETAILOR_ID</th>
+              <th>QUANTITY</th>
+              <th>INVENTORY_STATUS</th>
+              <th>SALES_PRICE</th>
+              <th>SHIPPING_CHARGE</th>
+              <th>SOURCE_LOCATION</th>
+              <th>ITEM_LOCATION</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let inentoryIan of inentoryIan; let i = index">
+                <td>{{ inentoryIan.ilId }}</td>
+                <td>{{ inentoryIan.skuCode }}</td>
+                <td>{{ inentoryIan.locationCode }}</td>
+                <td>{{ inentoryIan.etailorId }}</td>
+                <td>{{ inentoryIan.quantity }}</td>
+                <td>{{ inentoryIan.inventoryStatus }}</td>
+                <td>{{ inentoryIan.salesPrice }}</td>
+                <td>{{ inentoryIan.shippingChange }}</td>
+                <td>{{ inentoryIan.inventorySourceLocation }}</td>
+                <td>{{ inentoryIan.itemLocation }}</td>
+              </tr>
+            </tbody>
+          </table>
 
-<app-page-header [heading]="'Virtual Inventory'" [subheading]="'Live stock'" [icon]="'fa-table'"></app-page-header>
-
-<div class="container-fluid">
-   
-  <div class="card">
-    <div class="card-body">
-      
-  <!--<button href="https://www.facebook.com/opdahlmann" class="btn btn-mbe-normal sp" (click)="showPopup()">Inbound</button>-->  
-      <table class="table table-striped card-body table-responsive">
-          <thead>
-            <th>IL_ID</th>
-            <th>SKU_CODE</th>
-            <th>LOCATION_CODE</th>
-            <th>ETAILOR_ID</th>
-            <th>QUANTITY</th>
-            <th>INVENTORY_STATUS</th>
-            <th>SALES_PRICE</th>
-            <th>SHIPPING_CHARGE</th>
-            <th>SOURCE_LOCATION</th>
-            <th>ITEM_LOCATION</th>
-          </thead>
-          <tbody>
-            <tr *ngFor="let inentoryIan of inentoryIan ; let i = index">
-              <td>{{inentoryIan.ilId}}</td>
-              <td>{{inentoryIan.skuCode}}</td>
-              <td>{{inentoryIan.locationCode}}</td>
-              <td>{{inentoryIan.etailorId}}</td>
-              <td>{{inentoryIan.quantity}}</td>
-              <td>{{inentoryIan.inventoryStatus}}</td>
-              <td>{{inentoryIan.salesPrice}}</td>
-              <td>{{inentoryIan.shippingChange}}</td>
-              <td>{{inentoryIan.inventorySourceLocation}}</td>
-              <td>{{inentoryIan.itemLocation}}</td>
-            </tr>
-          </tbody>
-       
-        </table>
-      
-      <hr>
-        <ul class="nav nav-pills">
-            <li class="nav-item" *ngFor="let p of pages; let i =index">
-              <a class="nav-link" href="" (click)="setPage(i, $event)"
-              [ngClass]="{'active':i==page}" >{{i}}</a>
+          <hr />
+          <ul class="nav nav-pills">
+            <li class="nav-item" *ngFor="let p of pages; let i = index">
+              <a
+                class="nav-link"
+                href=""
+                (click)="setPage(i, $event)"
+                [ngClass]="{ active: i == page }"
+                >{{ i }}</a
+              >
             </li>
           </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-  
-</div>

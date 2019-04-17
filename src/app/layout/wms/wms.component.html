@@ -1,5 +1,12 @@
+<app-page-header [heading]="'Virtual Inventory'" [subheading]="'Live stock'" [icon]="'fa-table'"></app-page-header>
+
 <div [@routerTransition]>
-<app-virtual-inventory></app-virtual-inventory>
+    <div class="container-fluid">
+            <li><a routerLink="/crises">Test</a></li>
+        <app-inventory-serach></app-inventory-serach>
+        <app-virtual-inventory></app-virtual-inventory>
+    </div>
+
 <!-- <app-inventory></app-inventory> -->
 <data-table></data-table>
 </div>

@@ -11,30 +11,23 @@ import { OrderProcessingService } from '../order-processing.service';
 })
 export class ReadyToPickComponent implements OnInit {
 
-  closeResult: string;
-
   constructor(private dialog: MatDialog,
-    private service: OrderProcessingService) { }
+    private service: OrderProcessingService){}
+  
+  openForm(){
+      // this.service.initializeFormGroup();
+      const dialogConfig = new MatDialogConfig();
+      // dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
 
+      dialogConfig.width = '70%';
+      dialogConfig.height = 'auto';
+      this.dialog.open(ReadyToPackComponent,{ panelClass: 'custom-dialog-container' , disableClose :true });
+  
+  }
   ngOnInit() {
 
   }
-
-  // openLg(content) {
-  //   this.modalService.open(content, { size: 'lg' });
-  // }
-
-  // openVerticallyCentered(content) {
-  //   this.modalService.open(content, { centered: true });
-  // }
-  onCreate() {
-    this.service.initializeFormGroup();
-     const dialogConfig = new MatDialogConfig();
-     dialogConfig.disableClose = true;
-     dialogConfig.autoFocus = true;
-     dialogConfig.position;
-     dialogConfig.width = '100%';
-     this.dialog.open(ReadyToPackComponent, dialogConfig);
-   }
+  
 
 }
