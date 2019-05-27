@@ -1,0 +1,33 @@
+<section class="container-fluid">
+  <div class="row" style="background-color: cornsilk; padding-top: 10px !important; display: flex">
+    <div class="col-md-10"><h5>Handover Reprot</h5></div>
+    <div class="col-md-1"><i class="fa fa-window-close popup-close" aria-hidden="true" (click)="onClose()"></i></div>
+  </div>
+  <div class="row" style="background-color: cornsilk; padding-top: 10px !important; display: flex">
+        <table class="table table-responsive">
+          <tr valign="button">
+            <td >Carrier Name</td>
+            <td valign="top" nowrap="" class="xpu" >
+              <select style="width: 177px;">
+                  <option value="0" selected title="ATS">ATS</option>
+                  <option value="1" title="DLV">DLV</option>
+                  <option value="2" title="BLUEDART">BLUEDART</option>
+                  <option value="3" title="GLMQ">GLMQ</option>
+                  <option value="4" title="ECX">ECX</option>
+              </select>
+            </td>
+            </tr>
+            <tr  valign="button">
+                <td >CPT Date</td>
+                <td ><input type="date"></td>
+            </tr>
+            <tr>
+              <td align="right" ><input type="button" value="OK" style= "margin-left: 235%"></td>
+              <td align="right"><input type="button" value="CANCLE" ></td>
+            </tr>
+        </table>
+  </div>
+
+
+  
+</section>
